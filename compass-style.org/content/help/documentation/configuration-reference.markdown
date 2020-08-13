@@ -406,7 +406,7 @@ to avoid crashing the watcher in the case where the file has been removed.
 **`on_sprite_saved`** -- Pass this function a block of code that gets executed after a sprite is saved to disk. The block will be passed the filename. Can be invoked more then once. Example:
 
     on_sprite_saved do |filename|
-      post_process(filename) if File.exists?(filename)
+      post_process(filename) if File.exist?(filename)
     end
 
 **`on_sprite_generated`** -- Pass this function a block of code that gets executed after a sprite is generated but before its saved to disk. The block will be passed an instance of `ChunkyPNG::Image`. Can be invoked more then once. Example:
